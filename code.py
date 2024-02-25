@@ -5,8 +5,6 @@ import board
 led = digitalio.DigitalInOut(board.LED)
 led.switch_to_output()  # Set LED as output
 
-variables = {}  # Dictionary to store registered variables
-
 while True:
     if supervisor.runtime.serial_bytes_available:
         value = input().strip()
